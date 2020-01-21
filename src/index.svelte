@@ -4,9 +4,7 @@
 
 <script>
 import { onMount, onDestroy, createEventDispatcher } from 'svelte';
-
 import Fullpage from 'fullpage.js/dist/fullpage.extensions.min';
-
 import * as constants from './constant.js';
 
 // Options props & skip init
@@ -18,19 +16,19 @@ let api;
 // HTML fullpage element
 let fullpageEl;
 
-// 
+// Events
 const events = constants.EVENTS.reduce((eventsHandlers, event) => {
   return {
     ...eventsHandlers,
     [event]: (...args) => {
-      this.emitEvent(event, args)
+        emitEvent(event, args)
       }
     }
   },
 {});
 
 // Prepare the component
-onMount(() => {
+onMount(async () => {
   !skipInit && init()
 })
 
