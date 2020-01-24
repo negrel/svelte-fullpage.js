@@ -15,12 +15,13 @@ npm install svelte-fullpage.js
 
 ### Example
 
-Example is live [here](https://negrel.dev/svelte-fullpage.js/)
+Live example [here](https://negrel.dev/svelte-fullpage.js/)
+with [source code](https://github.com/negrel/svelte-fullpage.js-site)
+
 
 [![example gif](https://raw.githubusercontent.com/Nergel3/svelte-fullpage.js/master/resources/example.gif)](https://nergel3.github.io/svelte-fullpage.js/)
 
-Really simple example
-
+Basic example :
 ```html
 <script>
 	import Fullpage from 'svelte-fullpage.js';
