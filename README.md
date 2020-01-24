@@ -10,15 +10,37 @@ Svelte wrapper for the <a target="_blank" href="https://github.com/alvarotrigo/f
 ### Installation
 
 ```
-npm install --save-dev svelte-fullpage.js
+npm install svelte-fullpage.js
 ```
 
 ### Example
 
-![example gif](https://raw.githubusercontent.com/Nergel3/svelte-fullpage.js/master/resources/example.gif)
+Example is live [here](https://negrel.dev/svelte-fullpage.js/)
 
-```svelte
+[![example gif](https://raw.githubusercontent.com/Nergel3/svelte-fullpage.js/master/resources/example.gif)](https://nergel3.github.io/svelte-fullpage.js/)
 
+Really simple example
+
+```html
+<script>
+	import Fullpage from 'svelte-fullpage.js';
+
+	const options = {
+		navigation: true,
+		responsiveWidth: 700,
+		anchors: ['home', 'about-us', 'contact'],
+		parallax: true,
+		onLeave: function(origin, destination, direction){
+			console.log("Leaving section" + origin.index);
+		}
+	}
+</script>
+
+<Fullpage {options}>
+	<div class="section">Section 1</div>
+	<div class="section">Section 2</div>
+	<div class="section">Section 3</div>
+</Fullpage>
 ```
 
 
